@@ -5,7 +5,7 @@ import MuiAlert from '@mui/material/Alert';
 import {TextField, Button, Typography, Card, CardMedia, CardContent, BottomNavigation, BottomNavigationAction, Stack, IconButton, Skeleton, LinearProgress, Backdrop, CircularProgress, Grid, Divider, Breadcrumbs, Link, Chip, CardActions, List, ListItem, ListItemButton, ListItemText, ListItemIcon, Autocomplete, Badge, FormControl, FormLabel, FormControlLabel, Switch, FormGroup} from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
 import { useRouter } from 'next/router';
-import { DownloadDoneOutlined, ShareOutlined, PlayArrowIcon, VideoFileOutlined, MicRounded } from '@mui/icons-material';
+import { VideoFileOutlined, MicRounded, HomeIcon } from '@mui/icons-material';
 
 const Alert = React.forwardRef(function Alert(props, ref) {
     return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
@@ -71,6 +71,7 @@ export default function SearchInput() {
     const handleChange = (query) => {
         if(!query && (!url || url === "") ) {
             showNotification('error', 'Oops!! Please type your song title first :)')
+            setIsFetching(false);
             return;
         }
 
@@ -78,6 +79,7 @@ export default function SearchInput() {
         setURL(title);
         
         if(title === "") {
+            setIsFetching(false);
             showNotification('error', 'Oops!! Please type your song title first :)')
             return;
         }
@@ -86,7 +88,7 @@ export default function SearchInput() {
         setDownloadedData(null);
 
         fetch('/api/search?videoUrl='+title).then(resp => resp.json()).then(resp => {
-            console.log(resp)
+            setIsFetching(false);
             if(resp && resp.nowm) {
                 setDownloadedData(resp);
             } else {
@@ -94,7 +96,6 @@ export default function SearchInput() {
                 showNotification('error', 'Oops we could not fetch the tiktok URL! It might be the wrong URL structure :)')
             }
         });
-        //router.push('/search/'+title);
     }
     
     const handlePaste = (event) => {
@@ -161,14 +162,13 @@ export default function SearchInput() {
                         </CardContent>
                         <Box sx={{ display: 'block', pl: 1, pb: 1 }}>
                             <Button onClick={() => handleDownload(downloadedData.nowm)} size="small" sx={{mb: 2, ml: 1, minWidth: '300px'}}startIcon={<VideoFileOutlined />} variant={"contained"}>Download Video Without Watermark</Button>
-                            <Button onClick={() => handleDownload(downloadedData.music)} size="small" sx={{mb: 2, ml: 1,minWidth: '300px'}} startIcon={<MicRounded />} variant={"outlined"}>Download Music Only (Audio)</Button>
-                            <Button onClick={() => handleDownload(downloadedData.wm)} size="small" sx={{mb: 2, ml: 1, minWidth: '300px'}} startIcon={<VideoFileOutlined />} variant={"outlined"}>Download Video With Watermark</Button>
+                            <Button color={'info'} onClick={() => handleDownload(downloadedData.music)} size="small" sx={{mb: 2, ml: 1,minWidth: '300px'}} startIcon={<MicRounded />} variant={"outlined"}>Download Music Only (Audio MP3)</Button>
+                            <Button color={'info'} onClick={() => handleDownload(downloadedData.wm)} size="small" sx={{mb: 2, ml: 1, minWidth: '300px'}} startIcon={<VideoFileOutlined />} variant={"outlined"}>Download Video With Watermark</Button>
                         </Box>
                     </Box>
                     </Card>
                 </Box>
             }
-            
             
             <Snackbar anchorOrigin={{ vertical: 'top', horizontal: 'center' }} open={openSnackbar} autoHideDuration={5000} onClose={handleSnackbarClose}>
                 <Alert onClose={handleSnackbarClose} severity={notification.type || 'error'} sx={{ width: '100%' }}>

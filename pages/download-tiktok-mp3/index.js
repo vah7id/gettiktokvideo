@@ -1,11 +1,11 @@
 import Head from 'next/head'
-import styles from '../styles/Home.module.css'
-import SearchInput from './components/SearchInput'
+import styles from '../../styles/Home.module.css'
+import SearchInput from '../components/SearchInput'
 import { gtag, install } from 'ga-gtag';
 import { useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
-import Header from './components/Header'
-import FooterMenu from './components/Footer';
+import Header from '../components/Header'
+import FooterMenu from '../components/Footer';
 
 export default function Home() {
   const router = useRouter()

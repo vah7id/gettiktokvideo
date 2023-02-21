@@ -26,15 +26,20 @@ export default function handler(req, res) {
             }
         })
         if(resp) {
-            res.status(200).json({
-                nowm: domain+resp.data.data.play, 
-                wm: domain+resp.data.data.wmplay, 
-                music: domain+resp.data.data.music, 
-                title: resp.data.data.title,
-                cover: domain+resp.data.data.cover,
-                size: resp.data.data.size,
-                create_time: resp.data.data.create_time
-            })
+            if(resp.data && resp.data.data) {
+                res.status(200).json({
+                    nowm: domain+resp.data.data.play, 
+                    wm: domain+resp.data.data.wmplay, 
+                    music: domain+resp.data.data.music, 
+                    title: resp.data.data.title,
+                    cover: domain+resp.data.data.cover,
+                    size: resp.data.data.size,
+                    create_time: resp.data.data.create_time
+                })
+            } else {
+                res.status(400).json({err: 'Oops we could not fetch the tiktok URL! It might be the wrong URL structure :)'});
+            }
+            
         } else {
             res.status(400).json({err: 'Oops we could not fetch the tiktok URL! It might be the wrong URL structure :)'});
         }
