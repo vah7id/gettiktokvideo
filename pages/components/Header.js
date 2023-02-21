@@ -15,11 +15,11 @@ export default function Header() {
 
         <Link href="/" passHref>
           <h1 className={styles.title}>
-              TIKTOK DOWNLOADER
+              TIKTOK DOWNLOADER getTikTok.video
           </h1>
         </Link>
         <Typography variant="h2" style={{ maxWidth: '600px', fontSize: '0.85rem', lineHeight: '20px', opacity: '0.4', textAlign: 'center', margin: '16px 0 40px 0' }}>
-            Just paste your Tiktok URL down there to download the video (mp4) without the watermark and the music in audio mp3 (Vocal) seperately! Its FREE ENJOY:)
+        TikTok Video Download Without Watermark!! Just paste your Tiktok URL down there to download the video (mp4) without the watermark and the music in audio mp3 format!!
         </Typography>
       </>
     );

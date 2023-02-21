@@ -150,7 +150,7 @@ export default function SearchInput() {
                 <Card sx={{ display: 'flex' }}>
                     {!hideTheCover && <CardMedia
                         component="img"
-                        style={{maxHeight: 550}}
+                        style={{maxHeight: 600}}
                         image={downloadedData.cover} 
                         alt={downloadedData.title}
                     />}
