@@ -116,7 +116,7 @@ At times you will not be able to see an audio link. This means that mp3 is not a
                         sx={{ display: 'flex', alignItems: 'center' }}
                         href="/download-tiktok-mp3"
                     >
-                    Convert TikTok to MP3
+                    Convert TikTok Video to Audio MP3
                     </Link>
                     <Link
                         rel={"noopener"}
