@@ -16,18 +16,18 @@ export default function Home() {
   return (
     <div lang="en" className={styles.container}>
       <Head> 
-        <title>getTikTok.Video . TikTok downloader without watermark, Download TikTok video mp4 / audio mp3 online</title>
+      <title>getTikTok.Video . TikTok downloader Music Mp3, Download TikTok audio mp3 online</title>
         <meta charset="utf-8" />
         <meta name="description" content="Download TikTok videos fast and free with or without a watermark in mp4 video and mp3 audio downloader online" />
         <meta name="author" content="gettiktok.video" />
-        <link rel="icon" href="/logo5.ico" />
+        <link rel="icon" href="/logottorg.pg" />
         <link rel="alternate" href="http://gettiktok.video" hrefLang="en"/>
         <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no" name="viewport" />
         <meta name="keywords" content="getTikTokVideo,TikTok download,TikTok MP3 downloader,TikTok audio download,TikTok MP4 download,TikTok video downloader,Download TikTok videos,how to download tiktok videos" />
           <meta name="googlebot" content="index, follow" />
           <meta name="robots" content="index, follow" />
-          <link rel="apple-touch-icon-precomposed" href="/logo5.ico" />
-          <link rel="shortcut icon" href="/logo5.ico" />
+          <link rel="apple-touch-icon-precomposed" href="/favicon5.ico" />
+          <link rel="shortcut icon" href="/favicon5.ico" />
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:title" content="TikTok Downloader - Download and Save TikTok Videos Without Watermark & MP3 Songs.| getTikTok.video" />
           <meta name="twitter:description" content="TikTok Downloader - Download and Save TikTok Videos Without Watermark & MP3 Songs.| getTikTok.video" />
