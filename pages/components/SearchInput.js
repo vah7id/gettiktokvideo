@@ -136,8 +136,8 @@ export default function SearchInput() {
                 
                 
                 <Box sx={{ width: '100%', mt: '10px', opacity: '0.3', fontSize: '14px' }}>
-                    <Typography variant="subtitle">
-                     https://www.tiktok.com/@bad1g13/video/1100101010010101
+                    <Typography noWrap variant="caption" style={{fontSize:'11px'}}>
+                     https://tiktok.com/@user/video/101011
                     </Typography>
                 </Box>
                 {(isFetching) && <Box sx={{ width: '100%', mt: '15px' }}>
@@ -167,8 +167,8 @@ export default function SearchInput() {
                             </Typography>
                         </CardContent>
                         <Box sx={{ display: 'block', pl: 1, pb: 1 }}>
-                            <Button onClick={() => handleDownload(downloadedData.nowm)} size="small" sx={{mb: 2, ml: 1, minWidth: '300px'}}startIcon={<VideoFileOutlined />} variant={"contained"}>Download Video Without Watermark</Button>
-                            <Button color={'info'} onClick={() => handleDownload(downloadedData.music)} size="small" sx={{mb: 2, ml: 1,minWidth: '300px'}} startIcon={<MicRounded />} variant={"outlined"}>Download Music Only (Audio MP3)</Button>
+                            <Button onClick={() => handleDownload(downloadedData.nowm)} size="small" sx={{mb: 2, ml: 1, minWidth: '300px'}}startIcon={<VideoFileOutlined />} variant={"contained"}>Download Without Watermark</Button>
+                            <Button color={'info'} onClick={() => handleDownload(downloadedData.music)} size="small" sx={{mb: 2, ml: 1,minWidth: '300px'}} startIcon={<MicRounded />} variant={"outlined"}>Download Music Only (MP3)</Button>
                             <Button color={'info'} onClick={() => handleDownload(downloadedData.wm)} size="small" sx={{mb: 2, ml: 1, minWidth: '300px'}} startIcon={<VideoFileOutlined />} variant={"outlined"}>Download Video With Watermark</Button>
                             <Divider sx={{ opacity: 0.5 , mt: 2}}>
                             </Divider>
