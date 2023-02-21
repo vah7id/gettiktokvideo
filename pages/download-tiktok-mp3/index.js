@@ -11,7 +11,7 @@ export default function Home() {
   const router = useRouter()
 
   useEffect(() => {
-    install('G-LDDJ32MXZ1'); 
+    install('G-FC7M0Z3Y0R'); 
   })
   return (
     <div lang="en" className={styles.container}>
