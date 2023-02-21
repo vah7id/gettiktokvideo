@@ -5,7 +5,8 @@ import MuiAlert from '@mui/material/Alert';
 import {TextField, Button, Typography, Card, CardMedia, CardContent, BottomNavigation, BottomNavigationAction, Stack, IconButton, Skeleton, LinearProgress, Backdrop, CircularProgress, Grid, Divider, Breadcrumbs, Link, Chip, CardActions, List, ListItem, ListItemButton, ListItemText, ListItemIcon, Autocomplete, Badge, FormControl, FormLabel, FormControlLabel, Switch, FormGroup} from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
 import { useRouter } from 'next/router';
-import { VideoFileOutlined, MicRounded, HomeIcon } from '@mui/icons-material';
+import { VideoFileOutlined, MicRounded, HomeIcon, ShareOutlined } from '@mui/icons-material';
+import ShareURL from './ShareURL';
 
 const Alert = React.forwardRef(function Alert(props, ref) {
     return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
@@ -16,11 +17,15 @@ export default function SearchInput() {
     const [url, setURL] = React.useState('');
     const [hideTheCover, setHideTheCover] = React.useState(false);
     const [isFetching, setIsFetching] = React.useState(false);
+    const [openShare, setOpenShare] = React.useState(false);
     const [openSnackbar, setSnackbarOpen] = React.useState(false);
     const [notification, setNotification] = React.useState({ type: null, message: ""});
     const [downloadedData, setDownloadedData] = React.useState(null);
     const router = useRouter();
 
+    const handleOpenShare = () => {
+        setOpenShare(!openShare)
+    }
 
     React.useEffect(() => {
         setIsFetching(false);
@@ -145,6 +150,7 @@ export default function SearchInput() {
                 <Card sx={{ display: 'flex' }}>
                     {!hideTheCover && <CardMedia
                         component="img"
+                        style={{maxHeight: 550}}
                         image={downloadedData.cover} 
                         alt={downloadedData.title}
                     />}
@@ -164,6 +170,10 @@ export default function SearchInput() {
                             <Button onClick={() => handleDownload(downloadedData.nowm)} size="small" sx={{mb: 2, ml: 1, minWidth: '300px'}}startIcon={<VideoFileOutlined />} variant={"contained"}>Download Video Without Watermark</Button>
                             <Button color={'info'} onClick={() => handleDownload(downloadedData.music)} size="small" sx={{mb: 2, ml: 1,minWidth: '300px'}} startIcon={<MicRounded />} variant={"outlined"}>Download Music Only (Audio MP3)</Button>
                             <Button color={'info'} onClick={() => handleDownload(downloadedData.wm)} size="small" sx={{mb: 2, ml: 1, minWidth: '300px'}} startIcon={<VideoFileOutlined />} variant={"outlined"}>Download Video With Watermark</Button>
+                            <Divider sx={{ opacity: 0.5 , mt: 2}}>
+                            </Divider>
+                            <Button color={'success'} onClick={handleOpenShare} size="small" sx={{mb: 2, ml: 1, mt: 2, minWidth: '300px'}} startIcon={<ShareOutlined />} variant={"outlined"}>Share Video Download Link Via ...</Button>
+                            {openShare && <ShareURL shareUrl={downloadedData.nowm} title={`Download TikTok Video Without Watermark: ${downloadedData.title}, ${(downloadedData.size / (1024*1024)).toFixed(2)} MB`} />}
                         </Box>
                     </Box>
                     </Card>
