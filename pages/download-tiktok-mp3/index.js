@@ -16,7 +16,7 @@ export default function Home() {
   return (
     <div lang="en" className={styles.container}>
       <Head> 
-      <title>getTikTok.Video . TikTok downloader Music Mp3, Download TikTok audio mp3 online</title>
+      <title>getTikTok.video . Download TikTok Video without watermark mp4/mp3 online</title>
         <meta charset="utf-8" />
         <meta name="description" content="Download TikTok videos fast and free with or without a watermark in mp4 video and mp3 audio downloader online" />
         <meta name="author" content="gettiktok.video" />
