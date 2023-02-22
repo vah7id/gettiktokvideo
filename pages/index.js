@@ -44,8 +44,6 @@ export default function Home() {
           <meta itemProp="name" content="TikTok Downloader - Download and Save TikTok Videos Without Watermark & MP3 Songs.| getTikTok.video" />
           <meta itemProp="description" content="TikTok Downloader - Download and Save TikTok Videos Without Watermark & MP3 Songs.| getTikTok.video" />
           <meta itemProp="image" content="./logott2.png" />
-          <link rel="icon" sizes="192x192" href="./logott2.png" />
-          <link rel="icon" sizes="512x512" href="./logott2.png"></link>
       </Head>
       <main lang="en" className={styles.main}>
         <Header />
