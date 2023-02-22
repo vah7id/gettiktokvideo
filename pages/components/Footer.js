@@ -44,6 +44,17 @@ export default function FooterMenu() {
                    </li>
                 </ul>
 
+                <Typography variant='h3' style={{fontSize: '12px', opacity: 0.3}}>
+tiktok download video /
+tiktok downloader without watermark /
+tiktok downloader apk /
+tiktok download pc /
+tiktok downloader mp4 /
+tiktok downloader mp3 /
+tiktok downloader hd /
+tiktok downloader with watermark /
+                </Typography>
+
                 <Typography style={{fontSize: '13px', opacity: 0.5}} variant='caption'>
                 getTikTok.video is the most popular TikTok video downloader which allows you to save non watermarked TikTok videos. No need to install any apps to use our service, all you need is a browser and a valid link to paste in the input field on sss TikTok video downloader website and remove watermark from TikTok.
                 </Typography>
@@ -57,7 +68,7 @@ export default function FooterMenu() {
           aria-controls="panel2a-content"
           id="panel2a-header"
         >
-          <Typography>Download TikTok video on mobile phone</Typography>
+          <Typography>Download TikTok video on mobile phone/ PC</Typography>
         </AccordionSummary>
         <AccordionDetails>
         <Card sx={{ minWidth: 275, opacity: 0.8 }}>
@@ -90,6 +101,16 @@ Sometimes it maybe an M4A link instead of mp3. Most media players can support M4
 
 At times you will not be able to see an audio link. This means that mp3 is not available for this specific TT track. Try to find another one with similar music. We are working on this problem and it will be fixed soon.
           </Typography>
+          <Typography variant='h3' style={{fontSize: '12px', opacity: 0.3}}>
+tiktok download video /
+tiktok downloader without watermark /
+tiktok downloader apk /
+tiktok download pc /
+tiktok downloader mp4 /
+tiktok downloader mp3 /
+tiktok downloader hd /
+tiktok downloader with watermark /
+                </Typography>
           </CardContent>
           </Card>
         </AccordionDetails>

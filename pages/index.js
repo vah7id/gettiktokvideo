@@ -23,7 +23,7 @@ export default function Home() {
         <link rel="icon" href="/logottorg.pg" />
         <link rel="alternate" href="http://gettiktok.video" hrefLang="en"/>
         <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no" name="viewport" />
-        <meta name="keywords" content="getTikTokVideo,TikTok download,TikTok MP3 downloader,TikTok audio download,TikTok MP4 download,TikTok video downloader,Download TikTok videos,how to download tiktok videos" />
+        <meta name="keywords" content="TikTok video download without watermark,TikTok MP3 downloader,TikTok audio download,TikTok MP4 download,TikTok video downloader,Download TikTok videos,how to download tiktok videos" />
           <meta name="googlebot" content="index, follow" />
           <meta name="robots" content="index, follow" />
           <link rel="apple-touch-icon-precomposed" href="/favicon5.ico" />

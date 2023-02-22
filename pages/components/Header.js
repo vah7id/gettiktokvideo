@@ -11,15 +11,15 @@ export default function Header() {
     const router = useRouter();
     return (
       <>
-          <Image style={{ cursor: 'pointer'}} alt="logo" onClick={() => router.push('/')} src={logo2} />
+          <Image style={{ cursor: 'pointer'}} alt="Download TikTok Video Without Watermark HD getTikTok.video" onClick={() => router.push('/')} src={logo2} />
 
         <Link href="/" passHref>
           <h1 className={styles.title}>
-              TIKTOK DOWNLOADER getTikTok.video
+          Download TikTok Video Without Watermark HD!!
           </h1>
         </Link>
         <Typography variant="h2" style={{ maxWidth: '600px', fontSize: '0.85rem', lineHeight: '20px', opacity: '0.4', textAlign: 'center', margin: '16px 0 40px 0' }}>
-        TikTok Video Download Without Watermark!! Just paste your Tiktok URL down there to download the video (mp4) without the watermark and the music in audio mp3 format!!
+        Download TikTok Video Without Watermark HD!! Just paste your Tiktok URL down there to download the video (mp4) without the watermark and the music in audio mp3 format!!
         </Typography>
       </>
     );
