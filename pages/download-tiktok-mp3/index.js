@@ -9,7 +9,6 @@ import FooterMenu from '../components/Footer';
 
 export default function Home() {
   const router = useRouter()
-
   useEffect(() => {
     install('G-FC7M0Z3Y0R'); 
   })
@@ -36,7 +35,6 @@ export default function Home() {
           <meta property="fb:app_id" content="503426229739677">*/}
           <meta property="og:url" content="https://gettiktok.video" />
           <meta property="og:type" content="article" />
-          <link rel="canonical" href="https://gettiktok.video/" />
           <meta property="og:title" content="TikTok Downloader - Download and Save TikTok Videos Without Watermark & MP3 Songs.| getTikTok.video" />
           <meta property="og:image" content="/logott2.ico"/>
           <meta property="og:description" content="getTikTok.video is the TikTok video converter and downloader, With getTikTok.video you can download TikTok videos without watermark in MP4 HD quality and download TikTok MP3 audios in best quality."/>
