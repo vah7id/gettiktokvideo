@@ -19,7 +19,7 @@ export default function Home() {
         <meta charSet="utf-8" />
         <meta name="description" content="Download TikTok videos fast and free with or without a watermark in mp4 video and mp3 audio downloader online" />
         <meta name="author" content="gettiktok.video" />
-        <link rel="icon" href="/logottorg.pg" />
+        <link rel="icon" href="/logottorg.png" />
         <link rel="alternate" href="http://gettiktok.video" hrefLang="en"/>
         <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no" name="viewport" />
         <meta name="keywords" content="TikTok video download without watermark,TikTok MP3 downloader,TikTok audio download,TikTok MP4 download,TikTok video downloader,Download TikTok videos,how to download tiktok videos" />
@@ -41,7 +41,7 @@ export default function Home() {
           <meta property="og:site_name" content="gettiktok.video" />
           <meta itemProp="name" content="TikTok Downloader - Download and Save TikTok Videos Without Watermark & MP3 Songs.| getTikTok.video" />
           <meta itemProp="description" content="TikTok Downloader - Download and Save TikTok Videos Without Watermark & MP3 Songs.| getTikTok.video" />
-          <meta itemProp="image" content="./logott2.png" />
+          <meta itemProp="image" content="/logott2.png" />
       </Head>
       <main lang="en" className={styles.main}>
         <Header />
